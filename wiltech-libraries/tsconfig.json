@@ -14,6 +14,11 @@
     "declaration": false,
     "experimentalDecorators": true,
     "moduleResolution": "node",
+    "paths": {
+      "skeleton-loaders": [
+        "./dist/skeleton-loaders"
+      ]
+    },
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",

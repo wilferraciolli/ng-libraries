@@ -1,27 +1,22 @@
-# WiltechLibraries
+# WilTech libraries
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
 
-## Development server
+To create libraries follow this tutorial
+`https://angular.dev/tools/libraries/creating-libraries`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+For more details you see this tutorial here `https://www.syncfusion.com/blogs/post/share-angular-components-across-projects?ref=dailydev`
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* Create a workspace `ng new wiltech-libraries --no-create-application`
+* Create a library `ng generate library user-store`
 
-## Build
+The command above will create a workspace called `eiltech-libraries` followed by a library called `user-store` inside the projects folder
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To create components within the each library, then navigate to the root of the library Eg `cd projects` and `cd user-store`
 
-## Running unit tests
+# Adding dependencies
+Make sure that dependencies are added as peerDependencies to make sure it is added to the library and avoid issues as only peerDependencies are bundled together and dependencies is just for dev
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# building
+run `ng build`
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
