@@ -12,11 +12,13 @@ For more details you see this tutorial here `https://www.syncfusion.com/blogs/po
 
 The command above will create a workspace called `eiltech-libraries` followed by a library called `user-store` inside the projects folder
 
-To create components within the each library, then navigate to the root of the library Eg `cd projects` and `cd user-store`
+To create components within each library, then navigate to the root of the library Eg `cd projects` and `cd user-store`
 
 # Adding dependencies
-Make sure that dependencies are added as peerDependencies to make sure it is added to the library and avoid issues as only peerDependencies are bundled together and dependencies is just for dev
+Make sure that dependencies are added as peerDependencies AND dev dependencies at the same time
+to make sure it is added to the library and avoid issues as only peerDependencies are bundled together and dependencies is just for dev
 
-# building
-run `ng build`
-
+# building and publishing
+`ng build my-lib`
+`cd dist/my-lib`
+`npm publish`
