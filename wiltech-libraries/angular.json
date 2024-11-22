@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/skeleton-loaders",
       "sourceRoot": "projects/skeleton-loaders/src",
-      "prefix": "lib",
+      "prefix": "wiltech",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
@@ -28,6 +28,39 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "tsConfig": "projects/skeleton-loaders/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "wt-loaders": {
+      "projectType": "library",
+      "root": "projects/wt-loaders",
+      "sourceRoot": "projects/wt-loaders/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/wt-loaders/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/wt-loaders/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/wt-loaders/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/wt-loaders/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"

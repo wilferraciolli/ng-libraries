@@ -17,6 +17,9 @@
     "paths": {
       "skeleton-loaders": [
         "./dist/skeleton-loaders"
+      ],
+      "wt-loaders": [
+        "./dist/wt-loaders"
       ]
     },
     "importHelpers": true,
