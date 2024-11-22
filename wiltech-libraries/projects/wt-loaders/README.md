@@ -8,17 +8,10 @@ Run `ng generate component component-name --project wt-loaders` to generate a ne
 > Note: Don't forget to add `--project wt-loaders` or else it will be added to the default project in your `angular.json` file. 
 
 ## Build
-
 Run `ng build wt-loaders` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Publishing
-
 After building your library with `ng build wt-loaders`, go to the dist folder `cd dist/wt-loaders` and run `npm publish`.
 
-## Running unit tests
-
-Run `ng test wt-loaders` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## installing
+Run `npm install wt-loaders`

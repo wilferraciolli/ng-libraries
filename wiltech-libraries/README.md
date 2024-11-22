@@ -2,6 +2,7 @@
 
 
 To create libraries follow this tutorial
+`https://angular.love/create-your-standalone-angular-library-in-10-minutes` and 
 `https://angular.dev/tools/libraries/creating-libraries`
 
 For more details you see this tutorial here `https://www.syncfusion.com/blogs/post/share-angular-components-across-projects?ref=dailydev`
@@ -19,6 +20,7 @@ To create components within each library, then navigate to the root of the libra
 # Adding dependencies
 Make sure that dependencies are added as peerDependencies AND dev dependencies at the same time
 to make sure it is added to the library and avoid issues as only peerDependencies are bundled together and dependencies is just for dev
+Always make sure to install dependencies using the `--save-dev` flag to make sure it is added as peerDependency
 
 # building and publishing
 To be able to do that, build, navigate to the dist folder and publish it from there, NPM will ask you to login
@@ -28,7 +30,33 @@ To be able to do that, build, navigate to the dist folder and publish it from th
 
 
 ## For dev mode, we can build using the `--watch` mode, this will allow development as the same time to reload any changes on the fly 
-Eg ng build wt-loaders --watch
+Eg `ng build wt-loaders --watch`
 
 ## Notes
-When importing within the libraries, it must be explicity the import otherwise when we build it will not be able to find the files
+When importing within the libraries, it must be relative (full path) the import otherwise when we build it will not be able to find the files
+
+# Link library for local dev
+Link uses symlink to point the local npm registry to look at the library in your local machine rather than the published version, this allows debugin and watch mode.
+For it to work, we need to run the library within the DIST folder.
+PS when there are dependencies, then it may not work  unless if we use Typescript mapping within the tsconfig file.
+
+### Step 1 (library)
+within the libraries folder run the library in watch mode `ng build wt-loaders --watch`
+* run `cd dist/wt-loaders`
+* then `npm link`
+
+The command above should say in the console something 
+```angular2html
+added 1 package, and audited 3 packages in 2s
+```
+
+### step 2 (another app using the library)
+* Within the app you want to link with the library
+go to the angular.json and add `"preserveSymlinks": true,` within the architect.build.options object
+* fun `npm link wt-loaders`
+
+The command above should say the console
+```angular2html
+added 1 package, and audited 983 packages in 4s
+```
+* finally run ng serve and it should work
