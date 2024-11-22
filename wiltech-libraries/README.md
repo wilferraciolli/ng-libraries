@@ -60,3 +60,19 @@ The command above should say the console
 added 1 package, and audited 983 packages in 4s
 ```
 * finally run ng serve and it should work
+
+
+# Dependencies
+## Storybook
+Allow seeing components wne their customization (Run the command on the parent folder, the cli will ask which project to add the storuybook)
+`npx storybook@latest init`
+To run Storybook manually, run `ng run wt-loaders:storybook`
+To build Storybook manually, run `ng run wt-loaders:build-storybook`
+                                                                                 │
+   Wanna know more about Storybook? Check out https://storybook.js.org/          │
+   Having trouble or want to chat? Join us at https://discord.gg/storybook/
+
+## Prettier (Optional)
+This prettier adds a git commit hook to format the code as we commit changes
+`ng add @schuchard/prettier`
+Run `npm run prettier` to format the code 

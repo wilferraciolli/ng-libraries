@@ -66,6 +66,36 @@
               "zone.js/testing"
             ]
           }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "projects/wt-loaders/.storybook",
+            "browserTarget": "wt-loaders:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/wt-loaders"
+            ],
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "projects/wt-loaders/.storybook",
+            "browserTarget": "wt-loaders:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/wt-loaders"
+            ],
+            "outputDir": "dist/storybook/wt-loaders"
+          }
         }
       }
     }

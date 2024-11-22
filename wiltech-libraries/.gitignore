@@ -45,3 +45,5 @@ Thumbs.db
 .idea/*
 ng-libraries/.idea/*
 /projects/skeleton-loaders/node_modules/*
+
+*storybook.log
