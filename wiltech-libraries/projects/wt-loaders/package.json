@@ -1,17 +1,15 @@
 {
   "name": "wt-loaders",
   "version": "0.0.1",
-//  "exports": {
-//    "./lib/wt-loaders.component": {
-//      "types": "./public-api.d.ts",
-//      "default": "./esm2022/lib/wt-loaders.component.mjs"
-//    }},
   "peerDependencies": {
     "@angular/common": "^17.3.0",
-    "@angular/core": "^17.3.0"
+    "@angular/core": "^17.3.0",
+    "ngx-skeleton-loader": "^9.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "devDependencies": {
+  }
 }

@@ -13,5 +13,14 @@ Run `ng build wt-loaders` to build the project. The build artifacts will be stor
 ## Publishing
 After building your library with `ng build wt-loaders`, go to the dist folder `cd dist/wt-loaders` and run `npm publish`.
 
-## installing
-Run `npm install wt-loaders`
+## Dependencies and PeerDependencies
+### ngx loaders v9
+  `npm install ngx-skeleton-loader`
+
+## installing this library
+Run `npm install wt-loaders` then install the peerDependencies
+
+# Issues of not updating component
+to clear cache use
+`npm cache clean --force`
+`ng cache clean`

@@ -9,10 +9,8 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
   ],
   template: `
     <p>
-      skeleton-loaders works!
       <ngx-skeleton-loader count="5" appearance="circle" />
     </p>
-
 
     <br>
     <!-- Uses \`progress\` as animation -->

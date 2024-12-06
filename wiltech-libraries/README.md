@@ -7,18 +7,18 @@ To create libraries follow this tutorial
 
 For more details you see this tutorial here `https://www.syncfusion.com/blogs/post/share-angular-components-across-projects?ref=dailydev`
 
-Also a vider tutorial here `https://www.youtube.com/watch?v=qNHdQqYfcKE`
+Also a video tutorial here `https://www.youtube.com/watch?v=qNHdQqYfcKE`
 
 
 * Create a workspace `ng new wiltech-libraries --no-create-application`
 * Create a library `ng generate library wt-loaders`
 
-The command above will create a workspace called `eiltech-libraries` followed by a library called `user-store` inside the projects folder
+The command above will create a workspace called `wiltech-libraries` followed by a library called `user-store` inside the projects folder
 
 To create components within each library, then navigate to the root of the library Eg `cd projects` and `cd user-store`
 
 # Adding dependencies
-Make sure that dependencies are added as peerDependencies AND dev dependencies at the same time
+Make sure that dependencies are added as `peerDependencies` as it will then allow the client to pick up the version and avoid duplication 
 to make sure it is added to the library and avoid issues as only peerDependencies are bundled together and dependencies is just for dev
 Always make sure to install dependencies using the `--save-dev` flag to make sure it is added as peerDependency
 
@@ -59,7 +59,7 @@ The command above should say the console
 ```angular2html
 added 1 package, and audited 983 packages in 4s
 ```
-* finally run ng serve and it should work
+* finally run `ng serve` and it should work
 
 
 # Dependencies
@@ -76,3 +76,13 @@ To build Storybook manually, run `ng run wt-loaders:build-storybook`
 This prettier adds a git commit hook to format the code as we commit changes
 `ng add @schuchard/prettier`
 Run `npm run prettier` to format the code 
+
+## Linting (Optional)
+ Run this command to add the schematic
+`ng add @angular-eslint/schematics`
+
+ Add lint configuration for my-library
+`ng g @angular-eslint/schematics:add-eslint-to-project my-library`
+
+ Add lint configuration for my-library-web-components
+`ng g @angular-eslint/schematics:add-eslint-to-project my-library-web-components`
