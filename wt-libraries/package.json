@@ -7,7 +7,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
@@ -29,6 +30,8 @@
     "@angular/compiler-cli": "^19.0.0",
     "@schuchard/prettier": "^5.1.0",
     "@types/jasmine": "~5.1.0",
+    "angular-eslint": "19.0.2",
+    "eslint": "^9.16.0",
     "husky": "latest",
     "jasmine-core": "~5.4.0",
     "karma": "~6.4.0",
@@ -40,16 +43,17 @@
     "ng-packagr": "^19.0.0",
     "prettier": "latest",
     "tslint-config-prettier": "latest",
-    "typescript": "~5.6.2"
+    "typescript": "~5.6.2",
+    "typescript-eslint": "8.18.0"
   },
   "husky": {
-      "hooks": {
-        "pre-commit": "lint-staged"
-      }
-    },
-    "lint-staged": {
-      "*.{ts,tsx}": [
-        "prettier --write"
-      ]
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write"
+    ]
   }
+}
