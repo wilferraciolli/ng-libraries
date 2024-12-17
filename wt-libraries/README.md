@@ -63,7 +63,7 @@ added 1 package, and audited 983 packages in 4s
 
 
 # Dependencies
-## Storybook
+## Storybook - ADD to the parent and not to each library
 Allow seeing components wne their customization (Run the command on the parent folder, the cli will ask which project to add the storuybook)
 `npx storybook@latest init`
 To run Storybook manually, run `ng run wt-loaders:storybook`

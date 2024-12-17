@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/wt-loaders",
       "sourceRoot": "projects/wt-loaders/src",
-      "prefix": "lib",
+      "prefix": "wt",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
