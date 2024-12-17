@@ -1,5 +1,6 @@
 # WilTech libraries
 
+Latest tutorial here `https://medium.com/@aleksanderkolata/how-to-develop-angular-libraries-locally-ed8e1fd16892`
 
 To create libraries follow this tutorial
 `https://angular.love/create-your-standalone-angular-library-in-10-minutes` and 
@@ -35,13 +36,23 @@ Eg `ng build wt-loaders --watch`
 ## Notes
 When importing within the libraries, it must be relative (full path) the import otherwise when we build it will not be able to find the files
 
+# Install the library locally via npm
+This step shows how to manually install the library onto a client, not ideal as each change it will require a new install
+
+### Step 1 (library)
+within the libraries main root folder, run the library in watch mode `ng build wt-loaders --configuration development --watch`
+
+### step 2 (another app using the library)
+within the client app install by passing the absolute path of the dit folder to the library Eg for the wt-loaders library it will be
+`npm i "C:\DEV\GIT\WILTECH\ng-libraries\wt-libraries\dist\wt-loaders"` Note that each time a change is made, it would still require to re-install the library
+
 # Link library for local dev
 Link uses symlink to point the local npm registry to look at the library in your local machine rather than the published version, this allows debugin and watch mode.
 For it to work, we need to run the library within the DIST folder.
 PS when there are dependencies, then it may not work  unless if we use Typescript mapping within the tsconfig file.
 
 ### Step 1 (library)
-within the libraries folder run the library in watch mode `ng build wt-loaders --watch`
+within the libraries main root folder, run the library in watch mode `ng build wt-loaders --configuration development --watch`
 * run `cd dist/wt-loaders`
 * then `npm link`
 
@@ -53,13 +64,16 @@ added 1 package, and audited 3 packages in 2s
 ### step 2 (another app using the library)
 * Within the app you want to link with the library
 go to the angular.json and add `"preserveSymlinks": true,` within the architect.build.options object
-* fun `npm link wt-loaders`
+* run `npm link wt-loaders`
 
 The command above should say the console
 ```angular2html
 added 1 package, and audited 983 packages in 4s
 ```
 * finally run `ng serve` and it should work
+
+Tidy up - in order to tidy up, run `npm unlink wt-loaders` within the client app to close the link
+and within the library run `npm rm -g wt-loaders` to remove the link created
 
 
 # Dependencies
