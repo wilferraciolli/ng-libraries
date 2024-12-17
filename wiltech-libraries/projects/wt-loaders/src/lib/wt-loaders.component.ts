@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @Component({
@@ -9,21 +9,18 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
   ],
   template: `
     <p>
-      wt-loaders works!
-    </p>
-    <p>
-      skeleton-loaders works!
-      <ngx-skeleton-loader count="5"
+      <ngx-skeleton-loader count={{circleCount}}
                            appearance="circle"/>
     </p>
 
     <br>
 
+    progress, should progress
     <ngx-skeleton-loader
       animation="progress"/>
     <ngx-skeleton-loader/>
 
-    <p> pulse
+    <p> pulse, should puse
       <ngx-skeleton-loader
         animation="pulse"/>
     </p>
@@ -33,5 +30,6 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
   styles: ``
 })
 export class WtLoadersComponent {
-
+  @Input()
+  public circleCount: number = 1;
 }
