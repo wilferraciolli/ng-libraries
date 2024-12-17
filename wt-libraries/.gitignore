@@ -40,10 +40,3 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-
-# projects
-.idea/*
-ng-libraries/.idea/*
-/projects/skeleton-loaders/node_modules/*
-
-*storybook.log
