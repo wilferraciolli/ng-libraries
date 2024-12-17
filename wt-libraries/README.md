@@ -10,7 +10,7 @@ For more details you see this tutorial here `https://www.syncfusion.com/blogs/po
 Also a video tutorial here `https://www.youtube.com/watch?v=qNHdQqYfcKE`
 
 
-* Create a workspace `ng new wiltech-libraries --no-create-application`
+* Create a workspace `ng new wiltech-libraries --no-create-application --prefix=wt`
 * Create a library `ng generate library wt-loaders`
 
 The command above will create a workspace called `wiltech-libraries` followed by a library called `user-store` inside the projects folder

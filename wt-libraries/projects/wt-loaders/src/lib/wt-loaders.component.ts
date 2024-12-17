@@ -1,15 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'lib-wt-loaders',
+  selector: 'wt-loaders',
   imports: [],
-  template: `
-    <p>
-      wt-loaders works!
-    </p>
-  `,
+  standalone: true,
+  template: ` <p>wt-loaders works!</p> `,
   styles: ``
 })
-export class WtLoadersComponent {
-
-}
+export class WtLoadersComponent {}
