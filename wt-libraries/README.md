@@ -1,6 +1,10 @@
 # WilTech libraries
 
 Latest tutorial here `https://medium.com/@aleksanderkolata/how-to-develop-angular-libraries-locally-ed8e1fd16892`
+Latest tutorial here `https://medium.com/front-end-weekly/creating-custom-library-with-angular-197081b760e8`
+Tutorial to be following if you want to pack and install the library as a zip file locally `https://javascript.plainenglish.io/how-to-share-angular-components-across-different-modules-projects-of-angular-36e471d47f23`
+Tutorial of a monorepo npx example `https://www.syncfusion.com/blogs/post/share-angular-code-between-projects`
+
 
 To create libraries follow this tutorial
 `https://angular.love/create-your-standalone-angular-library-in-10-minutes` and 

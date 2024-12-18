@@ -24,3 +24,16 @@ Run `npm install wt-loaders` then install the peerDependencies
 to clear cache use
 `npm cache clean --force`
 `ng cache clean`
+
+
+# PS
+within the new angular control flow, it is possible to use the library on a defer block
+```angular2html
+<div class="item">
+  @defer {
+    <my-item-view />
+  } @placeholder (minimum 1000ms) {
+    <ngx-skeleton-loader />
+  }
+</div>
+```

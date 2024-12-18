@@ -1,1 +1,13 @@
-<p>loader-card works!</p>
+<mat-card appearance="outlined">
+  <mat-card-content>
+    <div class="item">
+      <ngx-skeleton-loader
+        [count]="circleCount"
+        appearance="circle"/>
+    </div>
+    <ngx-skeleton-loader/>
+    <ngx-skeleton-loader/>
+    <ngx-skeleton-loader/>
+    <ngx-skeleton-loader/>
+  </mat-card-content>
+</mat-card>
