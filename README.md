@@ -25,7 +25,7 @@ Eg for testing the wt-loaders library, simply navigate to the project folder `cd
 
 Then within the showcase app, you can simply import components from the library. Make sure that the peer dependencies are added to the showcase app
 
-# Adding story books to test library
+# Adding story books to test library (Added to showcase App)
 This project also has storybooks so all the library components can be tested. Ps make sure to install storybook onto the root folder
 Within wt-libraries run
 ```bash
@@ -48,8 +48,8 @@ to add each library created Eg
 
 To run story book simply type the library name and the storybook command eg
 ```bash
-  ng run storybook
-  ```
+  ng run showcase-app:storybook
+ ```
 
 
 

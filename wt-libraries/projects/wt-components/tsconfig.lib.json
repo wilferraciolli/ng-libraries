@@ -11,5 +11,9 @@
   },
   "exclude": [
     "**/*.spec.ts"
+  ],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.stories.ts"
   ]
 }

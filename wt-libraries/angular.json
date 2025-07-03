@@ -55,7 +55,7 @@
       },
       "root": "projects/showcase-app",
       "sourceRoot": "projects/showcase-app/src",
-      "prefix": "app",
+      "prefix": "wt",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -148,6 +148,24 @@
             ],
             "eslintConfig": "projects/showcase-app/eslint.config.js"
           }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "projects/showcase-app/.storybook",
+            "browserTarget": "showcase-app:build",
+            "compodoc": false,
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "projects/showcase-app/.storybook",
+            "browserTarget": "showcase-app:build",
+            "compodoc": false,
+            "outputDir": "dist/storybook/showcase-app"
+          }
         }
       }
     },
@@ -155,7 +173,7 @@
       "projectType": "library",
       "root": "projects/wt-components",
       "sourceRoot": "projects/wt-components/src",
-      "prefix": "lib",
+      "prefix": "wi",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",

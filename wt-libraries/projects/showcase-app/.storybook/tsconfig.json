@@ -1,0 +1,31 @@
+{
+  "extends": "../tsconfig.app.json",
+  "compilerOptions": {
+    "types": [
+      "node"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node"
+  },
+  "exclude": [
+    "../src/test.ts",
+    "../src/**/*.spec.ts"
+  ],
+  "include": [
+    "../src/**/*.stories.*",
+    "../src/**/*.stories.mdx",
+    "../../wt-loaders/src/**/*.stories.ts",
+    "../../wt-loaders/src/**/*.stories.mdx",
+    "../../wt-components/src/**/*.stories.ts",
+    "../../wt-components/src/**/*.stories.mdx",
+    "../src/**/*.ts",
+    "../../wt-loaders/src/lib/**/*.ts",
+    "../../wt-components/src/lib/**/*.ts",
+    "./typings.d.ts",
+    "./preview.ts"
+  ],
+  "files": [
+    "./typings.d.ts"
+  ]
+}
