@@ -44,3 +44,6 @@ Thumbs.db
 # IDea Webstorm
 .idea/*
 /projects/wt-loaders/node_modules/*
+
+*storybook.log
+storybook-static

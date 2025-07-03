@@ -25,4 +25,38 @@ Eg for testing the wt-loaders library, simply navigate to the project folder `cd
 
 Then within the showcase app, you can simply import components from the library. Make sure that the peer dependencies are added to the showcase app
 
+# Adding story books to test library
+This project also has storybooks so all the library components can be tested. Ps make sure to install storybook onto the root folder
+Within wt-libraries run
+```bash
+   npx storybook@latest init 
+ ```
+To configure story book to work with each library, then you will need to change the .storybook/main.js file within the root folder 
+to add each library created Eg
+```json
+  module.exports = {
+  stories: [
+    '../projects/wt-loaders/src/**/*.stories.@(js|jsx|ts|tsx|mdx)',
+    '../projects/wt-buttons/src/**/*.stories.@(js|jsx|ts|tsx|mdx)',
+    '../projects/wt-forms/src/**/*.stories.@(js|jsx|ts|tsx|mdx)',
+    // Add more patterns as you create more libraries
+  ],
+  // rest of your configuration...
+};
+
+```
+
+To run story book simply type the library name and the storybook command eg
+```bash
+  ng run storybook
+  ```
+
+
+
+## Key Points to Remember
+1. Make sure your library's components, services, etc. are properly exported in the public-api.ts file.
+2. Build your library before trying to use it in your test application.
+3. Use the watch mode for a better development experience.
+4. If you're using Angular's standalone components, make sure to update your imports accordingly.
+
 

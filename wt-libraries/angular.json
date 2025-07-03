@@ -150,6 +150,49 @@
           }
         }
       }
+    },
+    "wt-components": {
+      "projectType": "library",
+      "root": "projects/wt-components",
+      "sourceRoot": "projects/wt-components/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/wt-components/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/wt-components/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/wt-components/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/wt-components/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/wt-components/**/*.ts",
+              "projects/wt-components/**/*.html"
+            ],
+            "eslintConfig": "projects/wt-components/eslint.config.js"
+          }
+        }
+      }
     }
   },
   "cli": {

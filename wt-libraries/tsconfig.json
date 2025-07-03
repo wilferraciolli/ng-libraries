@@ -18,6 +18,9 @@
     "target": "ES2022",
     "module": "ES2022",
     "paths": {
+      "wt-components": [
+        "./dist/wt-components"
+      ],
       "wt-loaders": [
         "./dist/wt-loaders"
       ]
