@@ -9,6 +9,7 @@ For more details you see this tutorial here `https://www.syncfusion.com/blogs/po
 
 * Create a workspace `ng new wiltech-libraries --no-create-application`
 * Create a library `ng generate library user-store`
+* Create a showcase app to test `ng generate application showcase-app`
 
 The command above will create a workspace called `eiltech-libraries` followed by a library called `user-store` inside the projects folder
 
