@@ -1,0 +1,15 @@
+<div class="starRating-container">
+  @for (rating of ratings; track rating; let index = $index) {
+    <button mat-icon-button
+            [color]="color"
+            [id]="'star_'+index"
+            (click)="onClick(index+1)"
+            [matTooltip]="resolveToolTip(index+1)"
+            matTooltipPosition="above">
+      <mat-icon class="starRating-icon">
+        {{ showIcon(index) }}
+      </mat-icon>
+    </button>
+  }
+</div>
+

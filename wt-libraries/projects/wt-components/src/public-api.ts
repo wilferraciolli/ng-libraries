@@ -4,3 +4,4 @@
 
 export * from './lib/wt-components.service';
 export * from './lib/wt-components.component';
+export * from './lib/components/star-rating/star-rating.component';
