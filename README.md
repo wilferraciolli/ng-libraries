@@ -46,7 +46,7 @@ to add each library created Eg
 
 ```
 
-To run story book simply type the library name and the storybook command eg
+To run story book simply type the library name and the storybook command eg (make sure you are on the root folder `wt-libraries`)
 ```bash
   ng run showcase-app:storybook
  ```

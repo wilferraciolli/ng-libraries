@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from '@storybook/angular';
 
 import { moduleMetadata } from '@storybook/angular';
-import { WtComponentsComponent } from './wt-components.component';
+import { StarRatingComponent } from './star-rating.component';
 
 export default {
-  title: 'WtComponents/Button',
-  component: WtComponentsComponent,
+  title: 'WtComponents/StarRating',
+  component: StarRatingComponent,
   decorators: [
     moduleMetadata({
       imports: [
@@ -31,31 +31,28 @@ export default {
       description: 'Whether the button is disabled'
     }
   }
-} as Meta<WtComponentsComponent>;
+} as Meta<StarRatingComponent>;
 
-// Primary button story
-export const Primary: StoryObj<WtComponentsComponent> = {
+// Primary story
+export const Primary: StoryObj<StarRatingComponent> = {
   args: {
-    text: 'Primary Button',
-    color: 'primary',
-    disabled: false
+    rating: 1,
+    color: 'primary'
   }
 };
 
-// Secondary button story
-export const Secondary: StoryObj<WtComponentsComponent> = {
+// Accent story
+export const Secondary: StoryObj<StarRatingComponent> = {
   args: {
-    text: 'Secondary Button',
-    color: 'secondary',
-    disabled: false
+    rating: 2,
+    color: 'accent'
   }
 };
 
-// Disabled button story
-export const Disabled: StoryObj<WtComponentsComponent> = {
+// Warn story
+export const Disabled: StoryObj<StarRatingComponent> = {
   args: {
-    text: 'Disabled Button',
-    color: 'primary',
-    disabled: true
+    rating: 3,
+    color: 'warn'
   }
 };

@@ -1,7 +1,8 @@
+import { NgIf } from '@angular/common';
 import { Meta, StoryObj } from '@storybook/angular';
 import { moduleMetadata } from '@storybook/angular';
+import { StarRatingComponent } from '../../../wt-components/src/lib/components/star-rating/star-rating.component';
 import { LoaderCardComponent } from '../../../wt-loaders/src/lib/components/loader-card/loader-card.component';
-import { WtComponentsComponent } from '../../../wt-components/src/lib/wt-components.component';
 import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
@@ -18,12 +19,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       ></wt-loader-card>
       <div *ngIf="!loading">
         <h3>Content Loaded</h3>
-        <wt-components></wt-components>
+        <wt-star-rating></wt-star-rating>
       </div>
     </div>
   `,
   standalone: true,
-  imports: [LoaderCardComponent, WtComponentsComponent]
+  imports: [LoaderCardComponent, StarRatingComponent, NgIf]
 })
 class StoryCombinationComponent {
   loading = true;
@@ -50,7 +51,7 @@ export default {
         NgxSkeletonLoaderModule,
         BrowserAnimationsModule,
         LoaderCardComponent,
-        WtComponentsComponent
+        StarRatingComponent
       ]
     })
   ],
