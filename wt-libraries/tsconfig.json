@@ -21,6 +21,9 @@
       "wt-components": [
         "./dist/wt-components"
       ],
+      "wt-core": [
+        "./dist/wt-core"
+      ],
       "wt-loaders": [
         "./dist/wt-loaders"
       ]

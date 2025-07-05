@@ -6570,3 +6570,9 @@
 /wt-libraries/projects/wt-components/node_modules/zone.js/zone.d.ts
 /wt-libraries/projects/wt-components/node_modules/.package-lock.json
 /wt-libraries/projects/wt-components/node_modules/*
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/.gitignore
+/.idea/modules.xml
+/.idea/ng-libraries.iml
+/.idea/prettier.xml
+/.idea/vcs.xml
