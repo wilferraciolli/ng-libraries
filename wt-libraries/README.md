@@ -81,6 +81,11 @@ and within the library run `npm rm -g wt-loaders` to remove the link created
 
 
 # Dependencies
+## CSS loaders
+```bash
+  npm install sass sass-loader css-loader style-loader resolve-url-loader --save-dev
+```
+
 ## Storybook - ADD to the parent and not to each library
 Allow seeing components wne their customization (Run the command on the parent folder, the cli will ask which project to add the storuybook)
 `npx storybook@latest init`
@@ -89,6 +94,8 @@ To build Storybook manually, run `ng run wt-loaders:build-storybook`
                                                                                  │
    Wanna know more about Storybook? Check out https://storybook.js.org/          │
    Having trouble or want to chat? Join us at https://discord.gg/storybook/
+
+If you ever need to clear the cache within storybook, just run `npx storybook dev --clear-cache`
 
 ## Prettier (Optional)
 This prettier adds a git commit hook to format the code as we commit changes

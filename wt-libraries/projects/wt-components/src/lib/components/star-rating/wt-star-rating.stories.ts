@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/angular';
 
 import { moduleMetadata } from '@storybook/angular';
-import { StarRatingComponent } from './star-rating.component';
+import { StarRatingComponent } from 'wt-components';
 
 export default {
   title: 'WtComponents/StarRating',
