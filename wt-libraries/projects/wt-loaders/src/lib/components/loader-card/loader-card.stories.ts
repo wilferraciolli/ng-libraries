@@ -2,7 +2,7 @@ import { MatCardModule } from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
-import { LoaderCardComponent } from './loader-card.component';
+import { LoaderCardComponent } from 'wt-loaders';
 
 export default {
   title: 'WtLoaders/LoaderCard',
