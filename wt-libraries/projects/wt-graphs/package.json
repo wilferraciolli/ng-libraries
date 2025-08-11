@@ -2,10 +2,11 @@
   "name": "wt-graphs",
   "version": "0.0.1",
   "peerDependencies": {
-    "@angular/common": "^19.0.0",
-    "@angular/core": "^19.0.0"
+    "@angular/common": "^20.1.6",
+    "@angular/core": "^20.1.6"
   },
   "dependencies": {
+    "ng2-charts": "^8.0.0",
     "tslib": "^2.3.0"
   },
   "sideEffects": false
