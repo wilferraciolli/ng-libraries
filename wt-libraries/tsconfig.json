@@ -24,6 +24,9 @@
       "wt-core": [
         "./dist/wt-core"
       ],
+      "wt-graphs": [
+        "./dist/wt-graphs"
+      ],
       "wt-loaders": [
         "./dist/wt-loaders"
       ]

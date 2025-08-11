@@ -15,6 +15,22 @@ The command above will create a workspace called `wt-libraries` followed by a li
 
 To create components within each library, then navigate to the root of the library Eg `cd projects` and `cd user-store`
 
+# Publishing a library to npm
+first login into npm on the command line
+```bash
+  npm login
+```
+
+then uptick the package.json file and navigate to the libary to be puslished, then run
+```bash
+  ng build
+  ```
+
+next navigate to the dist folder and publish the library
+```bash
+  npm publish
+```
+
 
 # Making the showcase app and libraries to work together during developtmen
 In order to allow quick development, run the library that you want to see in the showcase in watch mode so changes to the library will apply to the app components

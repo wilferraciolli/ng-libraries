@@ -256,6 +256,49 @@
           }
         }
       }
+    },
+    "wt-graphs": {
+      "projectType": "library",
+      "root": "projects/wt-graphs",
+      "sourceRoot": "projects/wt-graphs/src",
+      "prefix": "wt",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/wt-graphs/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/wt-graphs/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/wt-graphs/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/wt-graphs/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/wt-graphs/**/*.ts",
+              "projects/wt-graphs/**/*.html"
+            ],
+            "eslintConfig": "projects/wt-graphs/eslint.config.js"
+          }
+        }
+      }
     }
   },
   "cli": {
