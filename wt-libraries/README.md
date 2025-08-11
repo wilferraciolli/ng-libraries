@@ -91,6 +91,8 @@ Allow seeing components wne their customization (Run the command on the parent f
 `npx storybook@latest init`
 To run Storybook manually, run `ng run wt-loaders:storybook`
 To build Storybook manually, run `ng run wt-loaders:build-storybook`
+
+To upgrade storybook version run `npx storybook@latest upgrade`
                                                                                  │
    Wanna know more about Storybook? Check out https://storybook.js.org/          │
    Having trouble or want to chat? Join us at https://discord.gg/storybook/

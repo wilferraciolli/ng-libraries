@@ -8,11 +8,7 @@ const config: StorybookConfig = {
     '../../wt-components/src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)',
     '../../wt-core/src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)'
   ],
-  addons: [
-    '@storybook/addon-docs',
-    '@storybook/addon-links',
-    '@storybook/addon-essentials'
-  ],
+  addons: ['@storybook/addon-docs', '@storybook/addon-links'],
   framework: {
     name: '@storybook/angular',
     options: {}
