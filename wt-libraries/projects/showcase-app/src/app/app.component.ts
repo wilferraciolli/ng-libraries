@@ -8,6 +8,8 @@ import { LineChartComponent } from 'wt-graphs';
 import { PieChartComponent } from 'wt-graphs';
 import { RadarChartComponent } from 'wt-graphs';
 import { BarChartComponent } from 'wt-graphs';
+import { PolarAreaChartComponent } from 'wt-graphs';
+import { ScatterChartComponent } from 'wt-graphs';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +22,8 @@ import { BarChartComponent } from 'wt-graphs';
     PieChartComponent,
     RadarChartComponent,
     BarChartComponent,
+    ScatterChartComponent,
+    PolarAreaChartComponent,
     UserRoleMapperPipe
   ],
   templateUrl: './app.component.html',
