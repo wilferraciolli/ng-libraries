@@ -4,6 +4,7 @@ import { StarRatingComponent } from 'wt-components';
 import { LoaderCardComponent } from 'wt-loaders';
 import { UserRoleMapperPipe } from 'wt-core';
 import { DoughnutChartComponent } from 'wt-graphs';
+import { LineChartComponent } from 'wt-graphs';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ import { DoughnutChartComponent } from 'wt-graphs';
     LoaderCardComponent,
     StarRatingComponent,
     DoughnutChartComponent,
+    LineChartComponent,
     UserRoleMapperPipe
   ],
   templateUrl: './app.component.html',
