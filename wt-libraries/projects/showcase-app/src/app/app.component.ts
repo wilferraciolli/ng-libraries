@@ -6,6 +6,7 @@ import { UserRoleMapperPipe } from 'wt-core';
 import { DoughnutChartComponent } from 'wt-graphs';
 import { LineChartComponent } from 'wt-graphs';
 import { PieChartComponent } from 'wt-graphs';
+import { RadarChartComponent } from 'wt-graphs';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { PieChartComponent } from 'wt-graphs';
     DoughnutChartComponent,
     LineChartComponent,
     PieChartComponent,
+    RadarChartComponent,
     UserRoleMapperPipe
   ],
   templateUrl: './app.component.html',
