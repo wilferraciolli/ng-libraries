@@ -6,3 +6,4 @@ export * from './lib/wt-graphs.service';
 export * from './lib/wt-graphs.component';
 export * from './lib/components/doughnut-chart/doughnut-chart.component';
 export * from './lib/components/line-chart/line-chart.component';
+export * from './lib/components/pie-chart/pie-chart.component';
