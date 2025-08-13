@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, signal, WritableSignal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { StarRatingComponent } from 'wt-components';
 import { LoaderCardComponent } from 'wt-loaders';
-// import { UserRoleMapperPipe } from '../../../wt-core/src/lib/pipes/user-role-mapper.pipe';
 import { UserRoleMapperPipe } from 'wt-core';
+import { DoughnutChartComponent } from 'wt-graphs';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +11,7 @@ import { UserRoleMapperPipe } from 'wt-core';
     RouterOutlet,
     LoaderCardComponent,
     StarRatingComponent,
+    DoughnutChartComponent,
     UserRoleMapperPipe
   ],
   templateUrl: './app.component.html',
@@ -18,6 +19,9 @@ import { UserRoleMapperPipe } from 'wt-core';
 })
 export class AppComponent {
   title = 'showcase-app';
+  public answerLabels: string[] = ['Answered', 'Unanswered'];
+  public answeredCount: WritableSignal<number> = signal(5);
+  public unansweredCount: WritableSignal<number> = signal(10);
 
   public onRatingChanged(rating: number): void {
     console.log(rating);

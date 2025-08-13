@@ -3,6 +3,11 @@
 <wt-loader-card/>
 
 <wt-star-rating (ratingUpdated)="onRatingChanged($event)"/>
-
+<wt-doughnut-chart
+  [title]="'Vote percentage'"
+  [halfDoughnut]="true"
+  [labels]="answerLabels"
+  [dataSets]="[answeredCount(), unansweredCount()]"
+/>
 
 <router-outlet/>

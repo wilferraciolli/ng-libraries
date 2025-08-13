@@ -1,1 +1,9 @@
-<p>doughnut-chart works!</p>
+<div class="doughnut-container">
+  <canvas baseChart
+          [labels]="doughnutChartLabels"
+          [datasets]="doughnutChartDatasets"
+          [options]="doughnutChartOptions"
+          [legend]="true"
+          [type]="'doughnut'">
+  </canvas>
+</div>
