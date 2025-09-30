@@ -1,4 +1,4 @@
-import { Component, signal, WritableSignal } from '@angular/core';
+import { Component, inject, signal, WritableSignal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { StarRatingComponent } from 'wt-components';
 import { LoaderCardComponent } from 'wt-loaders';
@@ -10,6 +10,8 @@ import { RadarChartComponent } from 'wt-graphs';
 import { BarChartComponent } from 'wt-graphs';
 import { PolarAreaChartComponent } from 'wt-graphs';
 import { ScatterChartComponent } from 'wt-graphs';
+import { BubbleChartComponent } from 'wt-graphs';
+import { ChartThemeService } from 'wt-graphs';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +26,7 @@ import { ScatterChartComponent } from 'wt-graphs';
     BarChartComponent,
     ScatterChartComponent,
     PolarAreaChartComponent,
+    BubbleChartComponent,
     UserRoleMapperPipe
   ],
   templateUrl: './app.component.html',
@@ -35,7 +38,10 @@ export class AppComponent {
   public answeredCount: WritableSignal<number> = signal(5);
   public unansweredCount: WritableSignal<number> = signal(10);
 
+  private _chartThemeService: ChartThemeService = inject(ChartThemeService);
+
   public onRatingChanged(rating: number): void {
     console.log(rating);
+    this._chartThemeService.setTheme('dark');
   }
 }
