@@ -299,6 +299,46 @@
           }
         }
       }
+    },
+    "wt-websockets": {
+      "projectType": "library",
+      "root": "projects/wt-websockets",
+      "sourceRoot": "projects/wt-websockets/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/wt-websockets/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/wt-websockets/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:karma",
+          "options": {
+            "tsConfig": "projects/wt-websockets/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/wt-websockets/**/*.ts",
+              "projects/wt-websockets/**/*.html"
+            ],
+            "eslintConfig": "projects/wt-websockets/eslint.config.js"
+          }
+        }
+      }
     }
   },
   "cli": {

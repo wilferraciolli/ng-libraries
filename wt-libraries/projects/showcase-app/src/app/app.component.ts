@@ -12,6 +12,7 @@ import { PolarAreaChartComponent } from 'wt-graphs';
 import { ScatterChartComponent } from 'wt-graphs';
 import { BubbleChartComponent } from 'wt-graphs';
 import { ChartThemeService } from 'wt-graphs';
+import { SocketService } from 'wt-websockets';
 
 @Component({
   selector: 'app-root',
@@ -39,6 +40,7 @@ export class AppComponent {
   public unansweredCount: WritableSignal<number> = signal(10);
 
   private _chartThemeService: ChartThemeService = inject(ChartThemeService);
+  private_webSocketService: SocketService = inject(SocketService);
 
   public onRatingChanged(rating: number): void {
     console.log(rating);

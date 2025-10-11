@@ -11,3 +11,4 @@
 /wt-libraries/projects/wt-core/node_modules/*
 /wt-libraries/projects/wt-components/node_modules/*
 /wt-libraries/projects/wt-loaders/node_modules/*
+/wt-libraries/projects/wt-websockets/node_modules/*

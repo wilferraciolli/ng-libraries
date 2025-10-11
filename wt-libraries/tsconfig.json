@@ -30,6 +30,9 @@
       ],
       "wt-loaders": [
         "./dist/wt-loaders"
+      ],
+      "wt-websockets": [
+        "./dist/wt-websockets"
       ]
     }
   },
@@ -38,5 +41,13 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  }
+  },
+  "references": [
+    {
+      "path": "./projects/wt-websockets/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/wt-websockets/tsconfig.spec.json"
+    }
+  ]
 }
