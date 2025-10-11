@@ -3,15 +3,17 @@ import { RouterOutlet } from '@angular/router';
 import { StarRatingComponent } from 'wt-components';
 import { LoaderCardComponent } from 'wt-loaders';
 import { UserRoleMapperPipe } from 'wt-core';
-import { DoughnutChartComponent } from 'wt-graphs';
-import { LineChartComponent } from 'wt-graphs';
-import { PieChartComponent } from 'wt-graphs';
-import { RadarChartComponent } from 'wt-graphs';
-import { BarChartComponent } from 'wt-graphs';
-import { PolarAreaChartComponent } from 'wt-graphs';
-import { ScatterChartComponent } from 'wt-graphs';
-import { BubbleChartComponent } from 'wt-graphs';
-import { ChartThemeService } from 'wt-graphs';
+import {
+  BarChartComponent,
+  BubbleChartComponent,
+  ChartThemeService,
+  DoughnutChartComponent,
+  LineChartComponent,
+  PieChartComponent,
+  PolarAreaChartComponent,
+  RadarChartComponent,
+  ScatterChartComponent
+} from 'wt-graphs';
 import { SocketService } from 'wt-websockets';
 
 @Component({

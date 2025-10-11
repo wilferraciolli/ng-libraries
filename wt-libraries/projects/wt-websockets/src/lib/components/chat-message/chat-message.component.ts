@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Message } from '../../sockets/interfaces/message.interface';
 import { NgClass } from '@angular/common';
+import { Message } from '../../interfaces/message.interface';
 
 @Component({
   selector: 'wt-chat-message',
