@@ -1,51 +1,31 @@
-import { Component, inject, signal, WritableSignal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { StarRatingComponent } from 'wt-components';
-import { LoaderCardComponent } from 'wt-loaders';
-import { UserRoleMapperPipe } from 'wt-core';
-import {
-  BarChartComponent,
-  BubbleChartComponent,
-  ChartThemeService,
-  DoughnutChartComponent,
-  LineChartComponent,
-  PieChartComponent,
-  PolarAreaChartComponent,
-  RadarChartComponent,
-  ScatterChartComponent
-} from 'wt-graphs';
-import { SocketService } from 'wt-websockets';
+import { Component, inject } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
+import { MatButtonModule, MatIconButton } from '@angular/material/button';
+import { MatToolbar } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule, MatMenuTrigger } from '@angular/material/menu';
 
 @Component({
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    LoaderCardComponent,
-    StarRatingComponent,
-    DoughnutChartComponent,
-    LineChartComponent,
-    PieChartComponent,
-    RadarChartComponent,
-    BarChartComponent,
-    ScatterChartComponent,
-    PolarAreaChartComponent,
-    BubbleChartComponent,
-    UserRoleMapperPipe
+    MatIconModule,
+    MatIconButton,
+    MatToolbar,
+    MatButtonModule,
+    MatMenuModule,
+    MatMenuTrigger,
+    MatButtonModule,
+    MatMenuModule,
+    MatIconModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'showcase-app';
-  public answerLabels: string[] = ['Answered', 'Unanswered'];
-  public answeredCount: WritableSignal<number> = signal(5);
-  public unansweredCount: WritableSignal<number> = signal(10);
+  private _routerService: Router = inject(Router);
 
-  private _chartThemeService: ChartThemeService = inject(ChartThemeService);
-  private_webSocketService: SocketService = inject(SocketService);
-
-  public onRatingChanged(rating: number): void {
-    console.log(rating);
-    this._chartThemeService.setTheme('dark');
+  public navigateTo(path: string): void {
+    this._routerService.navigate([`/${path}`]);
   }
 }

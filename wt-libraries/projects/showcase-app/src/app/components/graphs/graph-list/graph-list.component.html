@@ -1,0 +1,15 @@
+<div class="graphs-container">
+  <wt-doughnut-chart
+    [title]="'Vote percentage'"
+    [halfDoughnut]="true"
+    [labels]="answerLabels"
+    [dataSets]="[answeredCount(), unansweredCount()]"
+  />
+  <wt-line-chart />
+  <wt-pie-chart />
+  <wt-radar-chart />
+  <wt-bar-chart />
+  <wt-scatter-chart />
+  <wt-polar-area-chart />
+  <wt-bubble-chart />
+</div>

@@ -1,0 +1,12 @@
+.app {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  &-header-items {
+    margin-left: auto;
+  }
+}

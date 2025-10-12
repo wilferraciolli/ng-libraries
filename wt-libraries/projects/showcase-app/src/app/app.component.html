@@ -1,20 +1,37 @@
-<h1>Demo App </h1>
-<h1>{{title | userRoleMapperPipe}}</h1>
-<wt-loader-card/>
+<div class="app-container">
+  <mat-toolbar>
+    <button matIconButton class="example-icon"
+            [matMenuTriggerFor]="menu"
+            aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Showcase App</span>
 
-<wt-star-rating (ratingUpdated)="onRatingChanged($event)"/>
-<wt-doughnut-chart
-  [title]="'Vote percentage'"
-  [halfDoughnut]="true"
-  [labels]="answerLabels"
-  [dataSets]="[answeredCount(), unansweredCount()]"
-/>
-<wt-line-chart />
-<wt-pie-chart />
-<wt-radar-chart />
-<wt-bar-chart />
-<wt-scatter-chart />
-<wt-polar-area-chart />
-<wt-bubble-chart />
+    <div class="app-header-items">
+      <button matIconButton class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar>
 
-<router-outlet/>
+  <router-outlet/>
+</div>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="navigateTo('home')">
+    <mat-icon>home</mat-icon>
+    <span>Home</span>
+  </button>
+  <button mat-menu-item (click)="navigateTo('chats')">
+    <mat-icon>chat</mat-icon>
+    <span>Chats</span>
+  </button>
+  <button mat-menu-item (click)="navigateTo('charts')">
+    <mat-icon>area_chart</mat-icon>
+    <span>Charts</span>
+  </button>
+  <button mat-menu-item (click)="navigateTo('samples')">
+    <mat-icon>colorize</mat-icon>
+    <span>Samples</span>
+  </button>
+</mat-menu>
