@@ -40,9 +40,9 @@
     "@storybook/addon-docs": "^9.1.1",
     "@storybook/angular": "^9.1.1",
     "@types/jasmine": "~5.1.0",
-    "angular-eslint": "^18.0.0",
+    "angular-eslint": "^20.5.1",
     "css-loader": "^7.1.2",
-    "eslint": "^8.57.0",
+    "eslint": "^9.28.0",
     "eslint-plugin-storybook": "^9.1.1",
     "husky": "latest",
     "jasmine-core": "~5.4.0",
@@ -61,7 +61,7 @@
     "style-loader": "^4.0.0",
     "tslint-config-prettier": "latest",
     "typescript": "~5.8.0",
-    "typescript-eslint": "^8.0.0"
+    "typescript-eslint": "^8.33.1"
   },
   "husky": {
     "hooks": {
