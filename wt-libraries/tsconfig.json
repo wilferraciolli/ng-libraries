@@ -19,6 +19,9 @@
     "module": "ES2022",
     "baseUrl": ".",
     "paths": {
+      "forms": [
+        "./dist/forms"
+      ],
       "wt-components": [
         "./dist/wt-components"
       ],
@@ -48,6 +51,12 @@
     },
     {
       "path": "./projects/wt-websockets/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/forms/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/forms/tsconfig.spec.json"
     }
   ]
 }
